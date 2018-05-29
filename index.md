@@ -1,37 +1,20 @@
 ---
 layout: default
-title:  Welcome
+title:  Home
 ---
 
 # {{ page.title }}
 
 
-_Add your text here_
 
+`5/28/2018` 
 
-What's Markdown (`.md`)?
+Summer Responsibilites <br>
+For the next 2-3 months, do the following on a daily basis:
 
-Markdown is markup that lets you write hypertext (HTML) documents
-in easy-to-read and easy-to-write plain text.
-No angle brackets `<></>` required for
-paragraphs, lists, blockquotes, tables, etc.
+- 1 Forensics Chall
+- 1 RE Chall
+- Windows Sys. (refer to trello)
+- 1 Java Program
+- 1 C Program
 
-
-This is a paragraph (in Markdown). Some more
-text here.
-
-This is another paragraph.
-
-This is a list:
-
-- Orange
-- Apple
-- Blueberry
-
-
-
-Just getting started with Markdown?
-See the [HTML <-> Markdown Quick Reference (Cheat Sheet)][quickref].
-
-
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md

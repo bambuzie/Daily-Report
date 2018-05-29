@@ -1,12 +1,10 @@
 ---
 layout: default
-title:  Page Two
+title:  Code
 ---
 
 # {{ page.title }}
 
 
-Another sample page.
-
-_Add your text here_
+<a href="/C.html">C Programming</a>
 
