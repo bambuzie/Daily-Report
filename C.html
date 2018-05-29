@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Personal Notes - Jekyll Starter Theme</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+<div id="header">
+  <span class='big'>Variables</span>
+</div>
+
+<div id="nav">
+  <a href="/index.html">Home</a> •
+  <a href="/two.html">Code</a> •
+  <a href="/three.html">Security</a> 
+
+<div id="content">
+  <h1 id="personal-notes">C Programming</h1>
+
+<code class="highlighter-rouge">5/28/2018</code>
+
+<p> Wrote program that checks to see if I did a Linked List question correctly on the foundation exam. Goal of program is to insert(recursively) a node with data -1 infront of every even node. Example is commented out. </p>
+<code class="highlighter-rouge">
+#include stdio.h <br>
+#include stdlib.h <br>
+
+// 0 -> 1 -> 2 -> 3 <br>
+// 0 -> -1 -> 1 -> 2 -> -1 -> 3 <br>
+
+typedef struct node<br>
+{<br>
+  int data;<br>
+  struct node *next;<br>
+}node;<br>
+
+void *insert(node *head)<br>
+{<br>
+  if (head == NULL)<br>
+    return NULL;<br>
+  node *temp = head, *temp2 = head->next;<br>
+  head = head->next;<br>
+
+  if (temp->data % 2 == 0)<br>
+  {<br>
+    temp->next = malloc(sizeof(node));<br>
+    temp = temp->next;<br>
+    temp->data = -1;<br>
+    temp->next = temp2;<br> 
+  }<br>
+
+  temp2 = insert(head);<br>
+}<br>
+
+node *initialize(node *head, int val)<br>
+{<br>
+  if (head == NULL)<br>
+    return NULL;<br>
+
+  node *temp = NULL;<br>
+  for (temp = head; temp->next != NULL; temp = temp->next)<br>
+    ;<br>
+
+  
+  temp->next = malloc(sizeof(node));<br>
+  temp = temp->next;<br>
+  temp->data = val;<br>
+  return head;<br>
+}<br>
+
+node *createList(node *head)<br>
+{<br>
+  head = malloc(sizeof(node));<br>
+  head->data = 0;<br>
+  return head;<br>
+}<br>
+
+void printList(node *head)<br>
+{<br>
+  node *temp = head;<br>
+  while (temp != NULL)<br>
+  {<br>
+    printf(" %d %s", temp->data, (temp->next == NULL) ? " " : "->");<br>
+    temp = temp->next;<br>
+
+  }<br>
+}<br>
+int main(void)<br>
+{<br>
+  node *head = createList(head);<br>
+  int i;<br>
+  for (i = 1; i <= 4; i++)<br>
+    head = initialize(head,i);<br>
+
+  printf("Before:\n");<br>
+  printList(head);<br>
+
+  insert(head);<br>
+
+  printf("\nAfter:\n");<br>
+  printList(head);<br>
+  printf("\n");<br>
+  return 0;<br>
+}<br>
+
+
+</code>
+
+</div>
+
+</body>
+</html>
+
