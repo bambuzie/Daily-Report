@@ -6,5 +6,5 @@ title:  Security
 # {{ page.title }}
 
 
-hello
+<a href="/CTFs.html">CTFs</a>
 
